@@ -11,6 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPlace.Business.Entities",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPlace.Client.Entities", "MyPlace.Client.Entities\MyPlace.Client.Entities.csproj", "{AC8C8FD1-AE98-4B7C-941E-511AAA925820}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{0BD73C8E-1FF1-4D02-8B76-D9E2F04BE0F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Common", "Core.Common\Core.Common.csproj", "{41DE9728-0F90-49DA-850A-2F9BECBD2771}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Common.Contracts", "Core.Common.Contracts\Core.Common.Contracts.csproj", "{6CF4CCC8-DB40-41FE-943F-DC4899FDE9D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +31,14 @@ Global
 		{AC8C8FD1-AE98-4B7C-941E-511AAA925820}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC8C8FD1-AE98-4B7C-941E-511AAA925820}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC8C8FD1-AE98-4B7C-941E-511AAA925820}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41DE9728-0F90-49DA-850A-2F9BECBD2771}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41DE9728-0F90-49DA-850A-2F9BECBD2771}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41DE9728-0F90-49DA-850A-2F9BECBD2771}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41DE9728-0F90-49DA-850A-2F9BECBD2771}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CF4CCC8-DB40-41FE-943F-DC4899FDE9D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CF4CCC8-DB40-41FE-943F-DC4899FDE9D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CF4CCC8-DB40-41FE-943F-DC4899FDE9D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CF4CCC8-DB40-41FE-943F-DC4899FDE9D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,5 +46,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{FF56C824-125D-46D2-AE8C-1FF08812C021} = {AA19BD2B-19BB-49DC-BBEA-3C46BCDE6186}
 		{AC8C8FD1-AE98-4B7C-941E-511AAA925820} = {AB096608-3C34-4ACB-AF3C-67084419609F}
+		{41DE9728-0F90-49DA-850A-2F9BECBD2771} = {0BD73C8E-1FF1-4D02-8B76-D9E2F04BE0F1}
+		{6CF4CCC8-DB40-41FE-943F-DC4899FDE9D0} = {0BD73C8E-1FF1-4D02-8B76-D9E2F04BE0F1}
 	EndGlobalSection
 EndGlobal
