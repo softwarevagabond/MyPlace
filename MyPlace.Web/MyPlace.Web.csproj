@@ -173,6 +173,8 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\API\AccountApiController.cs" />
+    <Compile Include="Core\MefAPIDependencyResolver.cs" />
+    <Compile Include="Core\MefDependencyResolver.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -254,6 +256,10 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Core.Common\Core.Common.csproj">
+      <Project>{41de9728-0f90-49da-850a-2f9becbd2771}</Project>
+      <Name>Core.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MyPlace.Client.Bootstrapper\MyPlace.Client.Bootstrapper.csproj">
       <Project>{22512d3e-a88d-44a1-a50e-110376b0af83}</Project>
       <Name>MyPlace.Client.Bootstrapper</Name>

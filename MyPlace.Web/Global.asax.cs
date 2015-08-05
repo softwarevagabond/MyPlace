@@ -1,4 +1,5 @@
 ﻿using MyPlace.Client.Bootstrapper;
+using MyPlace.Web.Core;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition.Hosting;
@@ -27,6 +28,10 @@ namespace MyPlace.Web
             AggregateCatalog catalog = new AggregateCatalog();
             catalog.Catalogs.Add(new AssemblyCatalog(Assembly.GetExecutingAssembly()));
             CompositionContainer container = MEFLoader.Init(catalog.Catalogs);
+
+            DependencyResolver.SetResolver(new MefDependencyResolver(container)); // view controllers
+            GlobalConfiguration.Configuration.DependencyResolver = new MefAPIDependencyResolver(container); // web api controllers
+
 
         }
     }
