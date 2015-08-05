@@ -39,5 +39,7 @@ namespace MyPlace.Business.Entities
                   Id = value;
               }
           }
+
+        
     }
 }

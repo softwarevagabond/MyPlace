@@ -37,5 +37,5 @@ using System.Runtime.Serialization;
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
 //ToDo: Change this to the actual namespace later.
-[assembly: ContractNamespace("http://www.myplace.godaddy.com/MyPlace",
+[assembly: ContractNamespace("http://www.myplace.godaddy.com/Roni/MyPlace",
     ClrNamespace = "MyPlace.Client.Entities")]

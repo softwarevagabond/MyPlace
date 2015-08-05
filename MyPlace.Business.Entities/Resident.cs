@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace MyPlace.Business.Entities
 {
     [DataContract]
-    public class Resident : EntityBase, IIdentifiableEntity
+    public class Resident : EntityBase, IIdentifiableEntity, IResidentOwnedEntity
     {
         [DataMember]
         public Guid Id { get; set; }
@@ -68,6 +68,12 @@ namespace MyPlace.Business.Entities
             {
                 Id = value;
             }
+        }
+
+        //Explicit implementation of the i/f
+        Guid IResidentOwnedEntity.OwnerResidentId
+        {
+            get { return Id; }
         }
     }
 }
