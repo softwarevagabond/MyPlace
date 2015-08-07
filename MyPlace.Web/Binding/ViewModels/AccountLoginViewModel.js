@@ -25,15 +25,15 @@ appMainModule.controller("AccountLoginViewModel", function ($scope, $http, viewM
         viewModelHelper.modelErrors = $scope.accountModel.errors;
 
         if (viewModelHelper.modelIsValid) {
-            //viewModelHelper.apiPost('api/account/login', $scope.accountModel,
-            //    function (result) {
-            //        if ($scope.returnUrl != '' && $scope.returnUrl.length > 1) {
-            //            window.location.href = MyPlace.rootPath + $scope.returnUrl.substring(1);
-            //        }
-            //        else {
-            //            window.location.href = MyPlace.rootPath;
-            //        }
-            //    });
+            viewModelHelper.apiPost('api/account/login', $scope.accountModel,
+                function (result) {
+                    if ($scope.returnUrl != '' && $scope.returnUrl.length > 1) {
+                        window.location.href = MyPlace.rootPath + $scope.returnUrl.substring(1);
+                    }
+                    else {
+                        window.location.href = MyPlace.rootPath;
+                    }
+                });
         }
          
     }

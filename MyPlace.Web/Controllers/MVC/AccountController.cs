@@ -29,6 +29,22 @@ namespace MyPlace.Web.Controllers.MVC
             _SecurityAdapter.Initialize();
             return View(new AccountLoginModel() { ReturnUrl = returnUrl });
         }
+
+        [HttpGet]
+        [Route("logout")]
+        public ActionResult Logout()
+        {
+            _SecurityAdapter.Logout();
+            return RedirectToAction("Index", "Home");
+        }
+
+        [HttpGet]
+        //This route will be defdined in the ROuteConfig
+        public ActionResult Register()
+        {
+            _SecurityAdapter.Initialize();
+            return View();
+        }
     }
 
 }

@@ -56,6 +56,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -185,6 +186,7 @@
     <Compile Include="Controllers\API\AccountApiController.cs" />
     <Compile Include="Controllers\MVC\AccountController.cs" />
     <Compile Include="Controllers\MVC\HomeController.cs" />
+    <Compile Include="Core\ApiControllerBase.cs" />
     <Compile Include="Core\ISecurityAdapter.cs" />
     <Compile Include="Core\IServiceAwareController.cs" />
     <Compile Include="Core\MefAPIDependencyResolver.cs" />
@@ -194,12 +196,15 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountLoginModel.cs" />
+    <Compile Include="Models\AccountRegisterModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Binding\Models\AccountLoginModel.js" />
+    <Content Include="Binding\Models\AccountRegisterModel.js" />
     <Content Include="Binding\ViewModels\AccountLoginViewModel.js" />
+    <Content Include="Binding\ViewModels\AccountRegisterViewModel.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
