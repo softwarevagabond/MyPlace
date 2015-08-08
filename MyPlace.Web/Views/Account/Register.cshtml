@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "Register";
+    ViewBag.Title = "Account Registration";
 }
 
 @section scripts
@@ -8,5 +8,16 @@
     <script src="~/Binding/Models/AccountRegisterModel.js"></script>
     <script src="~/Binding/ViewModels/AccountRegisterViewModel.js"></script>
 }
-<h2>Register</h2>
+
+@section footerScript
+{
+    angular.bootstrap(document.getElementById("registration"),['accountRegister']);
+}
+<div data-ng-app="accountRegister" data-ng-controller="AccountRegisterViewModel" id="registration">
+    <br />
+    @Html.Partial("~/Views/Shared/_ValidationErrors.cshtml")
+    </br>
+
+    <div ng-view> </div>
+</div>
 

@@ -13,6 +13,19 @@ namespace MyPlace.Web
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            // these routes need to be defined before the attribute routes get defined-- Probably can do it via attribute routing
+            //Below 2 routes for the SPA silo
+            routes.MapRoute(
+                name: "accountRegisterRoot",
+                url: "account/register",
+                defaults: new { controller = "Account", action = "Register" });
+
+            routes.MapRoute(
+                name: "accountRegister",
+                url: "account/register/{*catchall}",
+                defaults: new { controller = "Account", action = "Register" });
+
+
             routes.MapMvcAttributeRoutes();
 
             routes.MapRoute(
